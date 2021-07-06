@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    /* disable scroll */
+    overflow: hidden;
+}
+body{
+    background-color: black;
+}
+
+.error{
+    display:none;
+}
+
+
+/* Login Form */
+.loginSection{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginBox{
+    height: 35vh;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.content{
+    padding: 0 3vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.loginBox h6{
+    font-size: 2em;
+    margin-bottom:10px;
+}
+.loginBox button{
+    width: 30vw;
+    padding: 1vh;
+    margin-top: 1vh;
+    margin-bottom: 4px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* to add dark push-down effect on hover */
+.loginBox button:hover{
+    cursor: pointer;
+    transform: translateY(2px);
+    filter: brightness(0.7);
+}
+
+#copy{
+    margin-top: 20px;       
+    text-align: center;
+    font-size: 0.75em;
+    font-weight: 200;
+    color: #62bbe4;
+}
+
+
+/* skywarfare splash-screen */
+
+.overall{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 100px 50px;
+}
+.name{
+    background-color: black;
+}
+
+.container h4{
+    display: inline;
+    font-size: 6em;
+    opacity: 0;         /* to make it initially invisible */
+}
+
+.tagline{
+    display: flex;
+    justify-content: center;
+}
+.tagline p{
+    letter-spacing: 1.5em;
+    font-weight: bold;
+    padding: 0.25em 0;             /* padding: vertical horizontal; */
+    background: white;
+    color: black;
+}
+
+/* Typewriter Effect */
+.name h4:nth-child(1){
+    animation: typewriter 1s calc(1s * 1 - 0.09s) forwards linear;
+}
+.name h4:nth-child(2){
+    animation: typewriter 1s calc(1s * 1.5 - 0.09s) forwards linear;
+}
+.name h4:nth-child(3){
+    animation: typewriter 1s calc(1s * 2 - 0.09s) forwards linear;
+}
+.name h4:nth-child(4){
+    animation: typewriter 1s calc(1s * 2.5 - 0.09s) forwards linear;
+}
+.name h4:nth-child(5){
+    animation: typewriter 1s calc(1s * 3 - 0.09s) forwards linear;
+}
+.name h4:nth-child(6){
+    animation: typewriter 1s calc(1s * 3.5 - 0.09s) forwards linear;
+}
+.name h4:nth-child(7){
+    animation: typewriter 1s calc(1s * 4 - 0.09s) forwards linear;
+}
+.name h4:nth-child(8){
+    animation: typewriter 1s calc(1s * 4.5 - 0.09s) forwards linear;
+}
+.name h4:nth-child(9){
+    animation: typewriter 1s calc(1s * 5 - 0.09s) forwards linear;
+}
+.name h4:nth-child(10){
+    animation: typewriter 1s calc(1s * 5.5 - 0.09s) forwards linear;
+}
+
+/* defining typewriter animation */
+@keyframes typewriter {
+    0%{
+        opacity: 0;
+    }
+    99%{
+        opacity: 0;              /* because we need sudden jump in opacity */
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/* Slider Effect */
+.slider{
+    transform: translateY(-100vh);
+    animation: slideDown 0.5s 7s forwards linear;
+}
+
+/* defining slideDown animation */
+@keyframes slideDown {
+    0%{
+        transform: translateY(-100vh);
+    }
+    60%{
+        transform: translateY(-60vh);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+/* Background */
+#bgImg{
+    position: absolute;
+    width: 100vw;
+    height: 400vh;
+    top: 0; left: 0;                 /* precaution to make sure no gaps appear b/w top left corner of screen and image */
+    z-index: -10;
+    transform: translateY(-300vh);      /* To coincide bottom left corners of screen and image. */
+}
+svg{
+    transform: translateY(100vh);
+}
+#bgImg #_1{
+    animation: down1 90s infinite;
+}
+@keyframes down1 {
+    to{
+        transform: translateY(400vh);
+    }
+}
+#bgImg #_2{
+    animation: down2 75s infinite;
+}
+@keyframes down2 {
+    to{
+        transform: translateY(400vh);
+    }
+}
+#bgImg #_3{
+    box-sizing: border-box;
+    transform-origin: center;
+    /* Top two statements to bring the origin of the element to it's center from the top left corner */
+    transform: scale(0.75);
+    animation: down3 60s infinite;
+}
+@keyframes down3 {
+    to{
+        transform: scale(0.75) translateY(400vh);
+    }
+}
+
+#mainJet{
+    position: absolute;
+    top: 250vh;
+    right: 100vw;
+    z-index: -1;
+    /* filter: invert(); */
+    box-sizing: border-box;
+    transform-origin: top center;
+    /* Top two statements to bring the origin of the element to it's center from the top left corner */
+    transform: rotate(55deg) scale(0.2);
+    animation: flyacross 14s 5s forwards linear;
+}
+@keyframes flyacross {
+    to{
+        transform: rotate(55deg) scale(0.2) translateY(-3000vh);
+    }
+}
+
+/* toggling error message on small sized screens */
+@media screen and (max-height:420px) {
+    #mainJet{
+        display: none;
+    } 
+    .slider{
+        display: none;
+    }
+    .error{
+        display: block;
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        color: tomato;
+        font-size: 1.5em;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+    }
+}
+
+/* restart game screen */
+
+:root {
+    --dark-bg: rgb(29, 34, 37);
+    --basic-btn: rgb(61, 111, 218);
+    --basic-btn-hover: rgb(17, 42, 97);
+}
+
+.card {
+    font-family: 'Baloo Thambi 2', cursive;
+    margin: 20px;
+    padding: 1%;
+    height: 28%;
+    width:30%;
+    top:35%;
+    left:34%;
+    position:fixed;
+    background-color: var(--dark-bg);
+    color: #FFF;
+    box-shadow: 0px 0px 25px #000;
+    border-radius: 10px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    transition: all .2s ease-in;
+}
+
+.card .btn {
+    padding: 10px 20px;
+    background-color: var(--basic-btn);
+    margin: 20px;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color .2s ease-in;
+    height:26%;
+    width:80%;
+    border: none;
+    border-radius:10px;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card .btn:hover {
+    background-color: var(--basic-btn-hover);
+    cursor:pointer;
+}
+
+#show{
+    margin-bottom: 25px;
+}
+
+/* top score section */
+
+#top-score{
+    position: fixed;
+    width: 100%;
+    margin-top:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#b{
+    margin-left: 20px;
+}
+
+/*  canvas  */
+
+#game-screen{
+    background-image: url('moonbg.png');
+    background-size: cover;
+    background-position: center center;
+}
